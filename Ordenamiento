@@ -1,0 +1,55 @@
+def seleccion(arreglo):
+    longitud = len(arreglo)
+    for i in range(longitud-1):
+        for j in range(i+1, longitud):
+            if arreglo[i] > arreglo[j]:
+                # Intercambiar
+                arreglo[i], arreglo[j] = arreglo[j], arreglo[i]
+
+
+def seleccion_descendente(arreglo):
+    longitud = len(arreglo)
+    for i in range(longitud-1):
+        for j in range(i+1, longitud):
+            if arreglo[i] < arreglo[j]:
+                # Intercambiar
+                arreglo[i], arreglo[j] = arreglo[j], arreglo[i]
+
+
+numeros = [935,117,115,5,45,86,23,19]
+print("Arreglo de números original:")
+print(numeros)
+seleccion(numeros)
+print("Arreglo de números ordenado: ")
+print(numeros)
+seleccion_descendente(numeros)
+print("Arreglo de números ordenado descendente: ")
+print(numeros)
+cadenas = ["Kelly", "Samuel", "Fred", "Linda", "John",
+           "Locke", "Vale", "Buck", "Tanaka","Palmer"]
+print("Arreglo de cadenas original:")
+print(cadenas)
+seleccion(cadenas)
+print("Arreglo de cadenas ordenado: ")
+print(cadenas)
+seleccion_descendente(cadenas)
+print("Arreglo de cadenas ordenado descendente: ")
+print(cadenas)
+
+
+
+
+
+el resultado seria:
+Arreglo de números original:
+[935, 117, 115, 5, 45, 86, 23, 19]
+Arreglo de números ordenado: 
+[5, 19, 23, 45, 86, 115, 117, 935]
+Arreglo de números ordenado descendente: 
+[935, 117, 115, 86, 45, 23, 19, 5]
+Arreglo de cadenas original:
+['Kelly', 'Samuel', 'Fred', 'Linda', 'John', 'Locke', 'Vale', 'Buck', 'Tanaka', 'Palmer']
+Arreglo de cadenas ordenado: 
+['Buck', 'Fred', 'John', 'Kelly', 'Linda', 'Locke', 'Palmer', 'Samuel', 'Tanaka', 'Vale']
+Arreglo de cadenas ordenado descendente: 
+['Vale', 'Tanaka', 'Samuel', 'Palmer', 'Locke', 'Linda', 'Kelly', 'John', 'Fred', 'Buck']
